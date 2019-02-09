@@ -74,15 +74,19 @@
     function onsub() {
         var em1 = document.getElementById("email1").value;
   if((em1)==""){
-            console.log("Left fields empty");
+            displayMessage("Left fields empty");
         }
          else if(em1.indexOf("@")==-1){
-            console.log("Not a valid email");
+            displayMessage("Not a valid email");
         }
 
         else{
             console.log(print());
     }
+}
+
+function displayMessage(message) {
+
 }
 </script>
 
