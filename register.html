@@ -53,21 +53,22 @@
 
 <body class="" data-aos="fade">
     <div class="container">
-        <img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo" width="150">
+        <a href="index.html"> <img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo"
+                href="index.html" width="150">
+        </a>
 
-        <form class="form-signin" id="signInForm">
 
-            <form class="form-signin">
-                <small class="text-white">CREATE AN ACCOUNT</small>
-                <hr style="background-color:white;">
-                <h3 class="font-weight-bold pb-4 text-white">Type your email in without pressing backspace.</h3>
-                <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
-                    onkeyup="keyup(event)" required>
-                <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" onkeydown="keydown2(event)"
-                    onkeyup="keyup2(event)" required>
-                <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Create
-                    account</button>
-            </form>
+        <form class="form-signin">
+            <small class="text-white">CREATE AN ACCOUNT</small>
+            <hr style="background-color:white;">
+            <h3 class="font-weight-bold pb-4 text-white">Type your email in without pressing backspace.</h3>
+            <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
+                onkeyup="keyup(event)" required aria-describedby="emailHelp">
+            <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" onkeydown="keydown2(event)"
+                onkeyup="keyup2(event)" required>
+            <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Create
+                account</button>
+        </form>
     </div>
 </body>
 
@@ -92,5 +93,6 @@
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
+
 
 </html>
