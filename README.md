@@ -1,4 +1,4 @@
 # attackathon
-Attack the password.
+Ditch your password.
 
-## TartanHacks 2019
+#### TartanHacks 2019
