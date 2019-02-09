@@ -17,8 +17,8 @@
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="TwitterBanner.svg"
    inkscape:export-filename="C:\Users\ericc\Documents\GitHub\attackathon\public\TwitterBanner.png"
-   inkscape:export-xdpi="75.33783"
-   inkscape:export-ydpi="75.33783">
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs6963" />
   <sodipodi:namedview
@@ -29,10 +29,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="2220.1266"
+     inkscape:cx="865.88768"
      inkscape:cy="1311.5853"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7744"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -119,14 +119,14 @@
       <text
          id="text7730"
          y="690.01776"
-         x="-1584.1545"
+         x="-1688.4746"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:72.76824188px;line-height:1.25;font-family:usual;-inkscape-font-specification:usual;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1819206"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'inter ui';-inkscape-font-specification:'inter ui';fill:#ffffff;fill-opacity:1;stroke-width:0.1819206"
            y="690.01776"
-           x="-1584.1545"
+           x="-1688.4746"
            id="tspan7728"
-           sodipodi:role="line">Ditch your password</tspan></text>
+           sodipodi:role="line">Moving past the password</tspan></text>
     </g>
   </g>
 </svg>
