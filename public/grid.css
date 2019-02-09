@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
 }
 
 .greyback {

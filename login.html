@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
 
+    <link rel="stylesheet" href="https://use.typekit.net/xsz4qow.css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104764221-9"></script>
     <script>
@@ -40,32 +42,33 @@
     <title>Log in - Keycore, an Attackathon project</title>
 
     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://use.typekit.net/mba2kma.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <!-- <link href="public/stylesheet.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="public/authentication.css">
     <link href="font/inter.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="public/grid.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="" data-aos="fade">
-    <canvas id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 1;"> </canvas>
+    <canvas data-aos="fade" id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 9;"> </canvas>
 
-    <div class="container" style="z-index: 9;">
+    <div class="container" style="z-index: 1;">
         <a href="index.html"><img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo"
                 width="150"></a>
 
-        <form class="form-signin">
-            <small class="text-white">LOG IN</small>
+        <form class="form-signin" autocomplete="off">
+            <small class="text-white" style="letter-spacing:2px;">LOG IN</small>
             <hr style="background-color:white;">
+
             <h3 class="font-weight-bold pb-4 text-white">Remember, type your email in without pressing backspace.</h3>
-            <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
+            <input type="email" id="email1" class="form-control" placeholder="Email address" onkeydown="keydown(event)"
                 onkeyup="keyup(event)">
-            <button class="btn btn-lg btn-light btn-block mt-4" id="sub" type="button" style="color:black;" onclick="onsub()">Log
+            <button class="btn btn-lg btn-light btn-block mt-4 mb-4" id="sub" type="button" style="color:black;" onclick="onsub()">Log
                 in</button>
+            <a class="btn btn-lg btn-block btn-outline-light" href="register.html">Need to create an account?</a>
         </form>
     </div>
 </body>
@@ -76,41 +79,42 @@
 <script>
     function onsub() {
         var em1 = document.getElementById("email1").value;
-  if((em1)==""){
+        if ((em1) == "") {
             displayMessage("Left fields empty");
-        }
-         else if(em1.indexOf("@")==-1){
+        } else if (em1.indexOf("@") == -1) {
             displayMessage("Not a valid email");
+        } else {
+            sendData()
         }
-else{
-        sendData()
     }
-       
-}
-function onAsy(res) {
-    console.log(res);
-     if(res=="true"){
-           confetti.render();
-       }
-       else if(res=="false"){
+
+    function displayMessage(message) {
+        console.log(message);
+        document.getElementById("subb").innerHTML = message;
+    }
+
+    function onAsy(res) {
+        console.log(res);
+        if (res == "true") {
+            confetti.render();
+        } else if (res == "false") {
             displayMessage("Failed to authenticate");
-       }
-       else {
+        } else {
             displayMessage("Error occured try again");
         }
-}
+    }
 
-function displayMessage(message) {
-    var obj = document.getElementById("sub")
-   var orig = obj.text;
-   obj.text = message ;
-   setTimeout(function(){
-        obj.text = orig;
-   }, 2000);
+    function displayMessage(message) {
+        var obj = document.getElementById("sub")
+        var orig = obj.text;
+        obj.text = message;
+        setTimeout(function () {
+            obj.text = orig;
+        }, 2000);
 
-    console.log(message);
+        console.log(message);
 
-}
+    }
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
