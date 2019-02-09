@@ -87,9 +87,16 @@
         var em1 = document.getElementById("email1").value;
         if ((em1) == "") {
             displayMessage("You left some fields empty");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Please fill out all the fields.";        
         } else if (em1.indexOf("@") == -1) {
-            displayMessage("We couldn't find that email");
-        } else {
+           displayMessage("We couldn't find that email");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Please enter a valid email.";       
+             }
+             else {
             sendData()
         }
     }

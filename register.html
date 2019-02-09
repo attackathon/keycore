@@ -93,11 +93,22 @@
         var em2 = document.getElementById("email2").value;
 
         if (em1 == "" || em2 == "") {
-            displayMessage("We couldn't verify your identity because you left a field empty.");
-        } else if (em1 != em2) {
-            displayMessage("We couldn't verify your identity because you typed different emails.");
-        } else if (em1.indexOf("@") == -1 || em2.indexOf("@") == -1) {
-            displayMessage("Make sure you add @ in the email.");
+            displayMessage("You left some fields empty");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Please fill out all the fields.";     
+                       } 
+                       else if (em1 != em2) {
+displayMessage("emails didnt match");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "The emails entered did not match";        
+                    } 
+                    else if (em1.indexOf("@") == -1 || em2.indexOf("@") == -1) {
+displayMessage("Enter valid email");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Please enter a valid email.";                
         } else {
             sendData();
         }
