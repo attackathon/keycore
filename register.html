@@ -87,13 +87,26 @@
         } else if (em1.indexOf("@") == -1 || em2.indexOf("@") == -1) {
             displayMessage("Not a valid email");
         } else {
-            console.log(print());
+            sendData();
         }
     }
 
     function displayMessage(message) {
 
     }
+
+    function onAsy(res) {
+    console.log(res);
+     if(res=="true"){
+           confetti.render();
+       }
+       else if(res=="false"){
+            displayMessage("Failed to authenticate");
+       }
+       else {
+            displayMessage("Error occured try again");
+        }
+}
 </script>
 
 <!-- AOS  -->
@@ -120,7 +133,7 @@
         rotate: true
     };
     var confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
+    //confetti.render();
     console.log("confetti")
 </script>
 

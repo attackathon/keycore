@@ -64,7 +64,7 @@
             <h3 class="font-weight-bold pb-4 text-white">Remember, type your email in without pressing backspace.</h3>
             <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
                 onkeyup="keyup(event)">
-            <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="onsub()">Log
+            <button class="btn btn-lg btn-light btn-block mt-4" id="sub" type="button" style="color:black;" onclick="onsub()">Log
                 in</button>
         </form>
     </div>
@@ -76,18 +76,41 @@
 <script>
     function onsub() {
         var em1 = document.getElementById("email1").value;
-        if ((em1) == "") {
+  if((em1)==""){
             displayMessage("Left fields empty");
-        } else if (em1.indexOf("@") == -1) {
-            displayMessage("Not a valid email");
-        } else {
-            console.log(print());
         }
+         else if(em1.indexOf("@")==-1){
+            displayMessage("Not a valid email");
+        }
+else{
+        sendData()
     }
+       
+}
+function onAsy(res) {
+    console.log(res);
+     if(res=="true"){
+           confetti.render();
+       }
+       else if(res=="false"){
+            displayMessage("Failed to authenticate");
+       }
+       else {
+            displayMessage("Error occured try again");
+        }
+}
 
-    function displayMessage(message) {
+function displayMessage(message) {
+    var obj = document.getElementById("sub")
+   var orig = obj.text;
+   obj.text = message ;
+   setTimeout(function(){
+        obj.text = orig;
+   }, 2000);
 
-    }
+    console.log(message);
+
+}
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -112,7 +135,6 @@
         rotate: true
     };
     var confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
     console.log("confetti")
 </script>
 

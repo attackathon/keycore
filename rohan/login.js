@@ -9,7 +9,8 @@ function mouse(e) {
   mouseMovements.push(data);
 }
 
-function print() {
+function sendData() {
+    var res;
 	var phoneBrows = window.mobileAndTabletcheck();
 	console.log(phoneBrows);
     console.log(list);
@@ -23,7 +24,9 @@ function print() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var json = JSON.parse(xhr.responseText);
             console.log(json);
-            return json;
+            res = json;
+           onAsy(res);
+
         }
     }
     var data = JSON.stringify({
