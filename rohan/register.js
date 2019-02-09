@@ -18,6 +18,8 @@ function sendData() {
     var text1 = (document.getElementById("email1").value).toLowerCase();
     var text2 = (document.getElementById("email2").value).toLowerCase();
     console.log(mouseMovements);
+    console.log(list)
+    console.log(list2)
     xhr = new XMLHttpRequest();
     var url = "https://attackathon.com/register";
     xhr.open("POST", url, true);
@@ -25,7 +27,7 @@ function sendData() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var json = JSON.parse(xhr.responseText);
-            console.log(json);
+           // console.log(json);
             onAsy(json);
         }
     }
@@ -39,9 +41,7 @@ function sendData() {
 
 
     });
-    console.log(data);
-    console.log(list);
-    console.log(list2);
+
 
     xhr.send(data);
     document.getElementById('email1').value = "";
@@ -79,7 +79,10 @@ function keyup(event) {
 
 function keyup2(event) {
     var x = event.which || event.keyCode;
-    console.log(x)
+    if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    return;
+  }
     var d = new Date();
     var n = d.getTime();
     var ind = currKeyInd.indexOf(x);
@@ -134,6 +137,11 @@ function keydown(event) {
 
 function keydown2(event) {
     var x = event.which || event.keyCode;
+    if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    document.getElementById("sub").click();
+    return;
+  }
 
   if(!currKeyInd.includes(x)){
       var d = new Date();

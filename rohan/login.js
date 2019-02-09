@@ -13,7 +13,6 @@ function mouse(e) {
 function sendData() {
     var res;
 	var phoneBrows = checkPhone();
-	console.log(phoneBrows);
     console.log(list);
     console.log(mouseMovements);
     var text = (document.getElementById("email1").value).toLowerCase();
@@ -24,7 +23,7 @@ function sendData() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var json = JSON.parse(xhr.responseText);
-            console.log(json);
+            //console.log(json);
             res = json;
            onAsy(res);
 
@@ -44,6 +43,9 @@ function sendData() {
 
 function keyup(event) {
     var x = event.which || event.keyCode;
+         if (event.keyCode === 13) {
+            return;
+}
     var d = new Date();
     var n = d.getTime();
     var ind = currKeyInd.indexOf(x);
@@ -68,6 +70,11 @@ function keyup(event) {
 
 function keydown(event) {
     var x = event.which || event.keyCode;
+     if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    document.getElementById("sub").click();
+    return;
+  }
 
     if (!currKeyInd.includes(x)) {
         var d = new Date();

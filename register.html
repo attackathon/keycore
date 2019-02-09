@@ -59,7 +59,7 @@
                 width="150"></a>
 
 
-        <form class="form-signin hidden" autocomplete="off">
+        <form class="form-signin hidden" onsubmit="return false" autocomplete="off">
             <small class="text-white" style="letter-spacing:2px;">CREATE AN ACCOUNT</small>
             <hr style="background-color:white;">
 
@@ -77,7 +77,7 @@
             <input type="email" id="email2" class="form-control" required="required" placeholder="Just one more time, please!"
                 onkeydown="keydown2(event)" onkeyup="keyup2(event)" required>
 
-            <button class="btn btn-lg btn-success btn-block mt-4 mb-4" type="button" style="color:black;" onclick="onsub()">Create
+            <button class="btn btn-lg btn-success btn-block mt-4 mb-4" type="button" style="color:black;" id="sub" onclick="onsub()">Create
                 account</button>
 
             <a class="btn btn-lg btn-block btn-outline-light" href="login.html">Already have an account?</a>
@@ -122,7 +122,6 @@ displayMessage("Enter valid email");
     }
 
     function onAsy(res) {
-        console.log("checke")
         console.log(res);
         if (res == "true") {
             confetti.render();
