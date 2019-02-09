@@ -58,7 +58,7 @@ a:hover {
 html,
 body {
     height: 100vh;
-    background-color:#333;
+    background-color:#f1f1f2;
 }
 
 body {
@@ -69,6 +69,11 @@ body {
 
 .cover-container {
     max-width: 90em; 
+}
+
+.background-container {
+    background-image: url(public/background1.jpg);
+    background-size: 100%; 
 }
 
 .cover {
@@ -99,7 +104,7 @@ body {
     margin-bottom: 0;
     font-size: 1.5rem;
     /*color: #ffb900;*/
-    color: #white;
+    color: white;
 }
 
 .nav-masthead .nav-link {
