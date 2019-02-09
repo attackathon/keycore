@@ -61,11 +61,11 @@
                 <small class="text-white">CREATE AN ACCOUNT</small>
                 <hr style="background-color:white;">
                 <h3 class="font-weight-bold pb-4 text-white">Type your email in without pressing backspace.</h3>
-                <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
+                <input type="email" id="email1" class="form-control" required="required" placeholder="What's your email address?" onkeydown="keydown(event)"
                     onkeyup="keyup(event)" required>
-                <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" onkeydown="keydown2(event)"
+                <input type="email" id="email2" class="form-control" required="required" placeholder="Please confirm your email" onkeydown="keydown2(event)"
                     onkeyup="keyup2(event)" required>
-                <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Create
+                <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="onsub()">Create
                     account</button>
             </form>
     </div>
@@ -75,7 +75,21 @@
 
 <script>
     function onsub() {
-        console.log(print());
+        var em1 = document.getElementById("email1").value;
+        var em2 = document.getElementById("email2").value;
+
+        if(em1=="" || em2==""){
+            console.log("Left fields empty");
+        }
+        else if(em1!=em2){
+            console.log("Values not equal");
+        }
+        else if(em1.indexOf("@")==-1 || em2.indexOf("@")==-1){
+            console.log("Not a valid email");
+        }
+        else{
+            console.log(print());
+        }
     }
 </script>
 
