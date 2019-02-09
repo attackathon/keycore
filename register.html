@@ -77,7 +77,8 @@
             <input type="email" id="email2" class="form-control" required="required" placeholder="Just one more time, please!"
                 onkeydown="keydown2(event)" onkeyup="keyup2(event)" required>
 
-            <button class="btn btn-lg btn-success btn-block mt-4 mb-4" type="button" style="color:black;" onclick="onsub()">Create account</button>
+            <button class="btn btn-lg btn-success btn-block mt-4 mb-4" type="button" style="color:black;" onclick="onsub()">Create
+                account</button>
 
             <a class="btn btn-lg btn-block btn-outline-light" href="login.html">Already have an account?</a>
         </form>
@@ -118,26 +119,24 @@
             element.classList.add("alert");
             var element2 = document.getElementById("subb");
             element2.classList.add("hide");
-            document.getElementById("subb2").innerHTML = "You've been registered! You can close this window when ready. ";
+            document.getElementById("subb2").innerHTML =
+                "You've been registered! You can close this window when ready. ";
         } else if (res == "false") {
             displayMessage("Failed to authenticate");
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Failed to authenticate user. Retry in 5 seconds.";
-        } 
-            else if (res == "errtext") {
+        } else if (res == "errtext") {
             displayMessage("Failed to authenticate");
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "The text inputs entered do not match";
-        }
-            else if (res == "errform") {
+        } else if (res == "errform") {
             displayMessage("Failed to authenticate");
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Please reinitialize your account";
-        }
-        else {
+        } else {
             displayMessage("Error occured try again");
             var element = document.getElementById("subb");
             element.classList.add("alert");
@@ -149,9 +148,10 @@
 <!-- AOS  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init({
+        duration: 400 // values from 0 to 3000, with step 50ms
+    });
 </script>
-
 <!-- Bootstrap  -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
