@@ -67,7 +67,7 @@
                     onkeydown="keydown(event)" onkeyup="keyup(event)" required>
                 <input type="email" id="email2" class="form-control" required="required" placeholder="Please confirm your email"
                     onkeydown="keydown2(event)" onkeyup="keyup2(event)" required>
-                <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="onsub()">Create
+                <button class="btn btn-lg btn-light btn-block mt-4" id="subb" type="button" style="color:black;" onclick="onsub()">Create
                     account</button>
             </form>
     </div>
@@ -92,6 +92,8 @@
     }
 
     function displayMessage(message) {
+        console.log(message);
+        document.getElementById("subb").value = message; 
 
     }
 
