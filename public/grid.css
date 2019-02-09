@@ -48,25 +48,17 @@
     .cover-container {
         width: 1000px;
     }
-
-    .cover-info {
-        padding: 10px;
-    }
 }
 
 @media (max-width: 1024px) {
-    .cover-info {
-        padding: 10px;
-    }
-
     .cover-container {
-        width: 98%;
+        width: 100%;
     }
 }
 
 @media (max-width: 825px) {
     .cover-container {
-        margin-top: 0;
+        margin-top: 5vh;
     }
 
     .container-fluid {

@@ -53,9 +53,9 @@
 </head>
 
 <body class="" data-aos="fade">
-    <canvas data-aos="fade" id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 9;"> </canvas>
+    <canvas data-aos="fade" id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 1;"> </canvas>
 
-    <div class="container" style="z-index: 1;">
+    <div class="container" style="z-index: 2;">
         <a href="index.html"><img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo"
                 width="150"></a>
 
@@ -135,7 +135,7 @@
 <script>
     var confettiSettings = {
         target: 'my-canvas',
-        max: 200,
+        max: 1000,
         rotate: true
     };
     var confetti = new ConfettiGenerator(confettiSettings);

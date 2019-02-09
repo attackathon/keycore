@@ -52,9 +52,9 @@
 </head>
 
 <body class="" data-aos="fade">
-    <canvas data-aos="fade" id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 9;"> </canvas>
+    <canvas data-aos="fade" id="my-canvas" style="position: fixed; top: 0; left: 0; z-index: 1;"> </canvas>
 
-    <div class="container" style="z-index: 1;">
+    <div class="container" style="z-index: 2;">
         <a href="index.html"><img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo"
                 width="150"></a>
 
@@ -62,13 +62,24 @@
         <form class="form-signin" autocomplete="off">
             <small class="text-white" style="letter-spacing:2px;">CREATE AN ACCOUNT</small>
             <hr style="background-color:white;">
-            <h3 class="font-weight-bold pb-4 text-white" id="subb">Type your email in without pressing backspace.</h3>
+
+            <div class="alert-success" id="subb2" role="alert">
+            </div>
+
+            <div class="alert-danger" id="subb" role="alert">
+            </div>
+
+            <h3 class="font-weight-bold pb-4 text-white">Type your email in without pressing backspace.</h3>
+
             <input type="email" id="email1" class="form-control" required="required" placeholder="What's your email address?"
                 onkeydown="keydown(event)" onkeyup="keyup(event)" required>
+
             <input type="email" id="email2" class="form-control" required="required" placeholder="Please type your email again"
                 onkeydown="keydown2(event)" onkeyup="keyup2(event)" required>
+
             <button class="btn btn-lg btn-light btn-block mt-4 mb-4" type="button" style="color:black;" onclick="onsub()">Create
                 account</button>
+
             <a class="btn btn-lg btn-block btn-outline-light" href="login.html">Already have an account?</a>
         </form>
     </div>
@@ -82,11 +93,11 @@
         var em2 = document.getElementById("email2").value;
 
         if (em1 == "" || em2 == "") {
-            displayMessage("You left the fields empty");
+            displayMessage("We couldn't verify your identity because you left a field empty.");
         } else if (em1 != em2) {
-            displayMessage("Emails not equal");
+            displayMessage("We couldn't verify your identity because you typed different emails.");
         } else if (em1.indexOf("@") == -1 || em2.indexOf("@") == -1) {
-            displayMessage("Make sure you add @ in the email");
+            displayMessage("Make sure you add @ in the email.");
         } else {
             sendData();
         }
@@ -94,17 +105,29 @@
 
     function displayMessage(message) {
         console.log(message);
+        var element = document.getElementById("subb");
+        element.classList.add("alert");
         document.getElementById("subb").innerHTML = message;
     }
 
     function onAsy(res) {
+        console.log("checke")
         console.log(res);
         if (res == "true") {
             confetti.render();
+            var element = document.getElementById("subb2");
+            element.classList.add("alert");
+            document.getElementById("subb2").innerHTML = "We've checked your identity! You can close this window when ready. ";
         } else if (res == "false") {
             displayMessage("Failed to authenticate");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Failed to authenticate user. Retry in 5 seconds.";
         } else {
             displayMessage("Error occured try again");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Loading failed. Retry in 5 seconds.";
         }
     }
 </script>
@@ -129,7 +152,7 @@
 <script>
     var confettiSettings = {
         target: 'my-canvas',
-        max: 200,
+        max: 1000,
         rotate: true
     };
     var confetti = new ConfettiGenerator(confettiSettings);
