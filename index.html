@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104764221-9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-104764221-9');
+            gtag('config', 'UA-104764221-9');
     </script>
 
     <!-- twitter card tags additive with the og: tags -->
@@ -17,15 +20,6 @@
     <meta name="twitter:title" value="Attackathon" />
     <meta name="twitter:description" value="Ditch the password." />
     <meta name="twitter:url" value="http://www.attackathon.com" />
-
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="https://use.typekit.net/gtd7oya.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/styles.css">
-    <link rel="stylesheet" href="font/inter.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -37,97 +31,168 @@
     <meta name="msapplication-TileColor" content="#133ef1">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Attackathon</title>
+    <title>Keycore, an Attackathon project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="public/stylesheet.css" rel="stylesheet">
+    <link href="font/inter.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link href="cover.css" rel="stylesheet"> -->
+
 </head>
 
-<body class="">
-    <div class="cover-container d-flex w-100 p-4 mx-auto flex-column" data-aos="fade" data-aos-duration="400">
-        <div class="background-container">
-            <header class="masthead mb-auto">
-                <div class="inner">
-                    <a class="navbar-brand" href="/">
-                        <img src="public/AttackathonLogoWhite.svg" height="30" alt="">
-                    </a>
-                    <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link" href="/">Sign up</a>
-                        <a class="nav-link" href="/">Log in</a>
-                    </nav>
-                </div>
-            </header>
+<body data-aos="fade">
+    <div class="background-container">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center mt-4 mb-4 pb-4 mb-3">
+                <h5 class="my-0 mr-md-auto font-weight-normal"><a class="" href="index.htm">
+                        <img src="public/AttackathonLogoWhite.svg" height="50" alt="">
+                    </a></h5>
+                <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-3 textWhite" href="#authentication">Features</a>
+                    <a class="p-3 textWhite" href="mailto:ericc2@cmu.edu">Support</a>
+                </nav>
+                <a class="btn btn-outline-light" href="register.html">Sign up</a>
+            </div>
+        </div>
 
-            <div class="inner-container">
-                <main role="main" class="inner cover">
-                    <h1 class="cover-heading">Ditch the password</h1>
-                    <br>
-                    <!-- <p class="lead">Fastplate is the best platform for food delivery on a college campus. We are building the
-                fastest, most accessible network for busy students to grab a bite.</p> -->
-                    <p class="lead">Create an account today, and experience the speed and convenience of Attackathon.</p>
-                    <a href="#" class="btn btn-primary">Sign up <b>&#8594;&#xFE0E; </b></a>
-                    <a href="mailto:info@fastplate.app?subject=Hey!" class="btn btn-outline-light">Get in touch</a>
-                </main>
+        <section class="container">
+            <div class="cover-container">
+                <div class="cover-description">
+                    <h1 class="display-4 textWhite">We used to have passwords. Now, we have Keycore.</h1>
+                    <p class="lead textWhite">Keycore is a new user authentication platform that examines the way you type a
+                        username.
+                    </p>
+                    <p class="lead textWhite">No more privacy leaks, no more hacked accounts, and best of all, no more passwords.
+                    </p>
+                    <a class="btn btn-primary btn-block" href="register.html">Create an account today</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="passwordContainer">
+        <div class="container">
+            <div class="pricing-header text-center" id="authentication">
+                <h1 class="display-4">Only enter your email to log in</h1>
+                <p class="lead">
+                    Attackathon combines the privacy of a passport, with the uniqueness of how you personally type your
+                    username or email address.</p>
+                <p class="lead">Say 👋 to the future of user authentication.</p>
             </div>
 
-            <footer class="mastfoot mt-auto text-center">
-                <footer class="page-footer font-small blue pt-4">
-                    <div class="text-center text-md-left">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="public/TextFullWhite.svg" height="25" alt="">
-                                <hr>
-                                <p>Designed and built by the coolest lads in Schlag.</p>
-                            </div>
-                            <hr class="clearfix w-100 d-md-none pb-3">
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="">Attackathon</h5>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Purpose</a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:support@attackathon.com">Support</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="">People</h5>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="https://chengeric.com">Eric Cheng</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/rohandkn">Rohan Dhesikan</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/chrisseiler">Chris Seiler</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="card-deck mb-3 text-center pt-4 pb-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <img src="public/icons/outline-timelapse-24px.png" height="40px" alt=""> </div>
+                    <div class="card-body text-left">
+                        <h3 class="card-title bold pricing-card-title">Easy</h3>
+                        <p>Our proprietary authentication algorithm intelligently detects patterns in the way you type
+                            your
+                            username. It doesn't matter if you're on desktop or mobile; no passwords needed!</p>
                     </div>
-                </footer>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <img src="public/icons/outline-code-24px.png" height="40px" alt="">
+                    </div>
+                    <div class="card-body text-left">
+                        <h3 class="card-title bold pricing-card-title">Dev-friendly</h3>
+                        <p>Developers, yeet! Authenticate users with only five lines of code, and leave the complex
+                            data
+                            encryption and handling to us.</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <img src="public/icons/outline-security-24px.png" height="40px" alt=""> </div>
+                    <div class="card-body text-left">
+                        <h3 class="card-title bold pricing-card-title">Secure</h3>
+                        <p>By detecting patterns and time-breaks in the way your type your username, an Attackathon
+                            authentication is up to times safer than a typical 8-digit alphanumeric.<sup>1</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</div>
+<!-- Call to action -->
+<div class="jumbotron background-call">
+    <div class="container">
+        <div class="jumbotron background-call-mini text-center">
+            <div class="row">
+                <div class="col-md-9 text-md-left">
+                    <h3 class="bold">Try Keycore for free today</h3>
+                </div>
+
+                <div class="col-md-3 text-md-right">
+                    <a class="btn btn-primary" href="register.html">Create an account</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Bootstrap  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+    <footer class="container pt-4 my-md-5 pt-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <hr>
+                <h5 class="bold">Features</h5>
+                <ul class="list-unstyled text-small text-muted">
+                    <li><a class="footerLink" href="#authentication">Technology</a>
+                    </li>
+                    <li><a class="footerLink" href="#authentication">Purpose</a>
+                    </li>
+                    <li><a class="footerLink bold" href="mailto:support@attackathon.com">Contact for support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <hr>
+                <h5 class="bold">The Attackathon Team</h5>
+                <ul class="list-unstyled text-small text-muted">
+                    <li><a class="footerLink" href="https://chengeric.com">Eric Cheng</a></li>
+                    <li><a class="footerLink" href="https://github.com/rohandkn">Rohan Dhesikan</a></li>
+                    <li><a class="footerLink" href="https://github.com/chrisseiler">Chris Seiler</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <hr>
+                <img class="mb-2 finalLogo" src="public/TextFullLogoWhite.svg" alt="">
+                <br>
+                <small class="">an Attackathon project</small>
+            </div>
+            <div class="col-md-6">
+                <hr>
+                <img class="mb-2 pr-2" height="50px" src="public/TartanHacksLogo.png" alt="Tartan Hacks">
+                <img class="mb-2" height="50px" src="public/CMU_Logo_Stack_White.png" alt="Carnegie Mellon University">
+                <br>
+                <small><sup>1</sup> Considering brute-force computation time</small>
+            </div>
+        </div>
+    </footer>
+</div>
 
-    <!-- Authentication function -->
-    <script src="public/login.js"></script>
-    <script src="public/register.js"></script>
+<!-- AOS  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
+<!-- Bootstrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 
 </html>
