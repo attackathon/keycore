@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="4000"
+   width="3000"
    height="2000"
-   viewBox="0 0 1058.3334 529.16665"
+   viewBox="0 0 793.75005 529.16665"
    version="1.1"
    id="svg6969"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="TwitterBanner.svg"
-   inkscape:export-filename="C:\Users\ericc\Documents\GitHub\attackathon\public\TwitterBanner.png"
-   inkscape:export-xdpi="75.33783"
-   inkscape:export-ydpi="75.33783">
+   sodipodi:docname="Devpost Banner.svg"
+   inkscape:export-filename="C:\Users\ericc\Documents\GitHub\attackathon\public\DevPost Banner.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs6963" />
   <sodipodi:namedview
@@ -29,7 +29,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="2220.1266"
+     inkscape:cx="2237.316"
      inkscape:cy="1311.5853"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -62,10 +62,10 @@
      id="layer1"
      transform="translate(1759.5127,-238.83314)">
     <g
-       id="g7744"
-       transform="translate(5.8874532e-5,-64.628514)">
+       id="g4553"
+       transform="translate(-29.482163,-31.45604)">
       <g
-         transform="matrix(0.26607787,0,0,0.26607787,-1080.3369,371.81422)"
+         transform="matrix(0.20551969,0,0,0.20551969,-1217.2878,383.18329)"
          id="g7726">
         <path
            inkscape:export-ydpi="75.33783"
@@ -118,15 +118,15 @@
       </g>
       <text
          id="text7730"
-         y="690.01776"
-         x="-1584.1545"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:72.76824188px;line-height:1.25;font-family:usual;-inkscape-font-specification:usual;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1819206"
+         y="628.96503"
+         x="-1687.016"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.20650482px;line-height:1.25;font-family:usual;-inkscape-font-specification:usual;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.14051625"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'inter ui';-inkscape-font-specification:'inter ui';fill:#ffffff;fill-opacity:1;stroke-width:0.1819206"
-           y="690.01776"
-           x="-1584.1545"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'inter ui';-inkscape-font-specification:'inter ui';fill:#ffffff;fill-opacity:1;stroke-width:0.14051625"
+           y="628.96503"
+           x="-1687.016"
            id="tspan7728"
-           sodipodi:role="line">Ditch your password</tspan></text>
+           sodipodi:role="line">Moving past the password</tspan></text>
     </g>
   </g>
 </svg>
