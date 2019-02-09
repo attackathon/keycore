@@ -89,7 +89,6 @@ main {
 .background-container {
     background-image: url(background4.jpg);
     background-size: 120%;
-    background-position-y: center;
     background-position-x: 90%;
     background-attachment: fixed;
     border-bottom: 5px solid #78c0e0;
