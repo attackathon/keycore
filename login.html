@@ -61,7 +61,7 @@
             <h3 class="font-weight-bold pb-4 text-white">Remember, type your email in without pressing backspace.</h3>
             <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
                 onkeyup="keyup(event)">
-            <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Log
+            <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="onsub()">Log
                 in</button>
         </form>
     </div>
@@ -72,9 +72,18 @@
 <!-- AOS  -->
 <script>
     function onsub() {
-        console.log(print());
-        console.log(print("yes"))
+        var em1 = document.getElementById("email1").value;
+  if((em1)==""){
+            console.log("Left fields empty");
+        }
+         else if(em1.indexOf("@")==-1){
+            console.log("Not a valid email");
+        }
+
+        else{
+            console.log(print());
     }
+}
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
