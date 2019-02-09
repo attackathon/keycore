@@ -1,2 +1,4 @@
 # attackathon
-Attack the password. | Attackathon@TartanHacks 2019
+Attack the password.
+
+## TartanHacks 2019
