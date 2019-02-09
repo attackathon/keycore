@@ -63,10 +63,16 @@
             <small class="text-white" style="letter-spacing:2px;">LOG IN</small>
             <hr style="background-color:white;">
 
+            <div class="alert-success" id="subb2" role="alert"></div>
+
+            <div class="alert-danger" id="subb" role="alert"></div>
+
             <h3 class="font-weight-bold pb-4 text-white">Remember, type your email in without pressing backspace.</h3>
+
             <input type="email" id="email1" class="form-control" placeholder="Email address" onkeydown="keydown(event)"
                 onkeyup="keyup(event)">
-            <button class="btn btn-lg btn-light btn-block mt-4 mb-4" id="sub" type="button" style="color:black;" onclick="onsub()">Log
+            <button class="btn btn-lg btn-light btn-block mt-4 mb-4" id="sub" type="button" style="color:black;"
+                onclick="onsub()">Log
                 in</button>
             <a class="btn btn-lg btn-block btn-outline-light" href="register.html">Need to create an account?</a>
         </form>
@@ -80,16 +86,17 @@
     function onsub() {
         var em1 = document.getElementById("email1").value;
         if ((em1) == "") {
-            displayMessage("Left fields empty");
+            displayMessage("You left some fields empty");
         } else if (em1.indexOf("@") == -1) {
-            displayMessage("Not a valid email");
+            displayMessage("We couldn't find that email");
         } else {
             sendData()
         }
     }
 
     function displayMessage(message) {
-        console.log(message);
+        var element = document.getElementById("subb");
+        element.classList.add("alert");
         document.getElementById("subb").innerHTML = message;
     }
 
@@ -97,10 +104,21 @@
         console.log(res);
         if (res == "true") {
             confetti.render();
+            var element = document.getElementById("subb2");
+            element.classList.add("alert");
+            var element2 = document.getElementById("subb");
+            element2.classList.add("hide");
+            document.getElementById("subb2").innerHTML = "We've checked your identity! You can close this window when ready. ";
         } else if (res == "false") {
             displayMessage("Failed to authenticate");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Failed to authenticate user. Retry in 5 seconds.";
         } else {
             displayMessage("Error occured try again");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Loading failed. Retry in 5 seconds.";
         }
     }
 

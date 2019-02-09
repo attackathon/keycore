@@ -59,7 +59,7 @@
                 width="150"></a>
 
 
-        <form class="form-signin" autocomplete="off">
+        <form class="form-signin hidden" autocomplete="off">
             <small class="text-white" style="letter-spacing:2px;">CREATE AN ACCOUNT</small>
             <hr style="background-color:white;">
 
@@ -117,7 +117,9 @@
             confetti.render();
             var element = document.getElementById("subb2");
             element.classList.add("alert");
-            document.getElementById("subb2").innerHTML = "We've checked your identity! You can close this window when ready. ";
+            var element2 = document.getElementById("subb");
+            element2.classList.add("hide");
+            document.getElementById("subb2").innerHTML = "You've been registered! You can close this window when ready. ";
         } else if (res == "false") {
             displayMessage("Failed to authenticate");
             var element = document.getElementById("subb");
