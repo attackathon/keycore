@@ -83,13 +83,14 @@ main {
 }
 
 .background-container {
-    background-image: url(public/background1.jpg);
+    background-image: url(public/korea.jpg);
     background-size: 100%;
-    border-bottom: 5px solid #0e0e52;
+    background: black;
+    border-bottom: 5px solid #78c0e0;
 }
 
 .passwordContainer {
-    background: #B5E4EB;
+    background: #F7F5F5;
 }
 
 .container {
@@ -369,10 +370,6 @@ main {
     color: #C5F0E7;
 }
 
-footer {
-    font-size: 110%;
-}
-
 footer a,
 footer h1, 
 footer h2,
@@ -409,6 +406,6 @@ footer hr {
 
 @media (max-width: 540px) {
     .finalLogo {
-        height: 22px;
+        height: 40px;
     }
 }
