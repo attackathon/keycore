@@ -37,7 +37,7 @@
     <meta name="msapplication-TileColor" content="#133ef1">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Create an Account - Keycore, an Attackathon project</title>
+    <title>Log in - Keycore, an Attackathon project</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -56,22 +56,18 @@
         <img class="d-block mx-auto mb-4" src="public/TextFullLogoWhite.svg" alt="Keycore logo" width="150">
 
         <form class="form-signin">
-
-            <form class="form-signin">
-                <small class="text-white">CREATE AN ACCOUNT</small>
-                <hr style="background-color:white;">
-                <h3 class="font-weight-bold pb-4 text-white">Type your email in without pressing backspace.</h3>
-                <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
-                    onkeyup="keyup(event)">
-                <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" onkeydown="keydown2(event)"
-                    onkeyup="keyup2(event)">
-                <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Create
-                    account</button>
-            </form>
+            <small class="text-white">LOG IN</small>
+            <hr style="background-color:white;">
+            <h3 class="font-weight-bold pb-4 text-white">Remember, type your email in without pressing backspace.</h3>
+            <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
+                onkeyup="keyup(event)">
+            <button class="btn btn-lg btn-light btn-block mt-4" type="button" style="color:black;" onclick="print()">Log
+                in</button>
+        </form>
     </div>
 </body>
 
-<script type="text/javascript" src="rohan/register.js"></script>
+<script type="text/javascript" src="rohan/login.js"></script>
 
 <!-- AOS  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

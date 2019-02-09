@@ -3,6 +3,32 @@ body {
     height: 100%;
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Inter UI, sans-serif;
+}
+
+html {
+    background-color: #133ef1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+li,
+footer {
+    font-family: Inter UI, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(19, 62, 241, 0.8);
+}
+
 body {
     display: -ms-flexbox;
     display: flex;
