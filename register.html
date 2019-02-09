@@ -124,7 +124,20 @@
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Failed to authenticate user. Retry in 5 seconds.";
-        } else {
+        } 
+            else if (res == "errtext") {
+            displayMessage("Failed to authenticate");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "The text inputs entered do not match";
+        }
+            else if (res == "errform") {
+            displayMessage("Failed to authenticate");
+            var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Please reinitialize your account";
+        }
+        else {
             displayMessage("Error occured try again");
             var element = document.getElementById("subb");
             element.classList.add("alert");
