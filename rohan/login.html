@@ -4,7 +4,7 @@
 <div onmousemove="mouse(event)">
 <p>Enter</p>
 
-<input type="text" id="email" onkeydown="keydown(event)" onkeyup="keyup(event)">
+<input type="text" id="email" autocomplete="off" onkeydown="keydown(event)" onkeyup="keyup(event)">
 
 <input type="button" onclick="print()">
 </div>
@@ -43,6 +43,9 @@ function print() {
         "phone": phoneBrows
     });
     xhr.send(data);
+    document.getElementById('email').value = "";
+
+       list = []
 
 }
 
@@ -59,7 +62,7 @@ function keyup(event) {
     if (keyUp.code == 8) {
          document.getElementById('email').value = "";
          list = []
-         
+
     } else if (!((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode==16)) {
         list.pop();
         if (list.length > 0) {
