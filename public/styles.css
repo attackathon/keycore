@@ -72,7 +72,7 @@ body {
 }
 
 .background-container {
-    background-image: url(public/background1.jpg);
+    background-image: url(background1.jpg);
     background-size: 100%; 
 }
 
