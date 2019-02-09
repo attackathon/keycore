@@ -73,20 +73,11 @@ function keyup(event) {
     currKeysDown.splice(currKeysDown.indexOf(keyUp), 1);
     currKeyInd.splice(currKeyInd.indexOf(x), 1);
     list.push(keyUp);
-    if (keyUp.code == 8) {
-        if (list.length > 0) {
-     var tr = list.pop();
-            if(tr.code==16 && list.length>0){
-              list.pop();
-            }        }
-        if (list.length > 0) {
-     var tr = list.pop();
-            if(tr.code==16 && list.length>0){
-              list.pop();
-            }        }
-        if (list.length > 0) {
-            list[list.length - 1]['heldStart'] = keyUp.heldStart;
-        }
+ 
+        if (keyUp.code == 8) {
+         document.getElementById('email1').value = "";
+         list = []
+         
     } else if (!((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode==16)) {
         list.pop();
         if (list.length > 0) {
@@ -108,21 +99,11 @@ function keyup2(event) {
     currKeysDown.splice(currKeysDown.indexOf(keyUp), 1);
     currKeyInd.splice(currKeyInd.indexOf(x), 1);
     list2.push(keyUp);
-    if (keyUp.code == 8) {
-        if (list2.length > 0) {
-            var tr = list2.pop();
-            if(tr.code==16 && list2.length>0){
-              list2.pop();
-            }
-        }
-        if (list2.length > 0) {
-     var tr = list2.pop();
-            if(tr.code==16 && list2.length>0){
-              list2.pop();
-            }        }
-        if (list2.length > 0) {
-            list2[list2.length - 1]['heldStart'] = keyUp.heldStart;
-        }
+  
+       if (keyUp.code == 8) {
+         document.getElementById('email2').value = "";
+         list = []
+         
     } else if (!((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode==16)) {
         list2.pop();
         if (list2.length > 0) {

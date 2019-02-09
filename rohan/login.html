@@ -57,15 +57,9 @@ function keyup(event) {
     currKeyInd.splice(currKeyInd.indexOf(x), 1);
     list.push(keyUp);
     if (keyUp.code == 8) {
-        if (list.length > 0) {
-            list.pop();
-        }
-        if (list.length > 0) {
-            list.pop();
-        }
-        if (list.length > 0) {
-            list[list.length - 1]['heldStart'] = keyUp.heldStart;
-        }
+         document.getElementById('email').value = "";
+         list = []
+         
     } else if (!((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode==16)) {
         list.pop();
         if (list.length > 0) {
