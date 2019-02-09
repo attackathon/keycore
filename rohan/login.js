@@ -2,6 +2,7 @@
 var currKeyInd = [];
 var list = [];
 var mouseMovements = []
+
 function mouse(e) {
   var x = e.clientX;
   var y = e.clientY;
