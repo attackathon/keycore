@@ -4,6 +4,10 @@
     font-family: Inter UI, sans-serif;
 }
 
+html {
+    background-color: #133ef1;
+}
+
 h1,
 h2,
 h3,
@@ -276,7 +280,6 @@ main {
 
 .background-call {
     border-radius: 0;
-    border-top: 5px solid #0e0e52;
     background: rgba(19, 62, 241, 1);
     margin-bottom: 0;
 }
