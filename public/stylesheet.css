@@ -124,6 +124,10 @@ main {
     transition: 0.25s;
 }
 
+.callToAction {
+    border-top: 15px solid #3ddc97;
+}
+
 .nav-link:hover {
     color: #002246 !important;
     border-bottom: 4px solid #002246;

@@ -32,6 +32,14 @@ footer {
     display: none;
 }
 
+.btn-success {
+    background: #3ddc97 !important;
+}
+
+.btn-success:hover {
+    background: #339c3c !important;
+}
+
 body {
     display: -ms-flexbox;
     display: flex;
