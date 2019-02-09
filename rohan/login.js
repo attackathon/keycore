@@ -17,7 +17,7 @@ function sendData() {
     console.log(mouseMovements);
     var text = (document.getElementById("email1").value).toLowerCase();
     xhr = new XMLHttpRequest();
-    var url = "http://attackathon.com/compare";
+    var url = "https://attackathon.com/compare";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
