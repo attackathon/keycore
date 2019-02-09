@@ -51,18 +51,31 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="text-center">
+<body class="text-center" data-aos="fade">
     <form class="form-signin">
-        <img class="mb-4" src="public/AttackathonLogoWhite.svg" alt="" width="72">
+        <img class="mb-4" src="public/AttackathonLogoWhite.svg" alt="" width="40">
         <h3 class="bold pb-4 text-white">Create your Keycore account</h3>
-        <label for="inputEmail" class="sr-only"></label>
-        <input type="email" id="email1" class="form-control" placeholder="What's your email address?" required autofocus
-            onkeydown="keydown(event)" onkeyup="keyup(event)"" >
-        <label for=" inputPassword" class="sr-only"></label>
-        <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" required>
+        <input type="email" id="email1" class="form-control" placeholder="What's your email address?" onkeydown="keydown(event)"
+            onkeyup="keyup(event)">
+        <input type="email" id="email2" class="form-control" placeholder="Please confirm your email" onkeydown="keydown2(event)"
+            onkeyup="keyup2(event)">
         <button class="btn btn-lg btn-light btn-block mt-4" type="submit" onclick="print()">Create account</button>
     </form>
 </body>
+
 <script src="public/register.js"></script>
+<!-- AOS  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<!-- Bootstrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 
 </html>
