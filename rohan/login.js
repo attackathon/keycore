@@ -23,6 +23,7 @@ function print() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var json = JSON.parse(xhr.responseText);
             console.log(json);
+            return json;
         }
     }
     var data = JSON.stringify({
