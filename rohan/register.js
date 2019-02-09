@@ -19,7 +19,7 @@ function sendData() {
     var text2 = (document.getElementById("email2").value).toLowerCase();
     console.log(mouseMovements);
     xhr = new XMLHttpRequest();
-    var url = "http://attackathon.com/register";
+    var url = "https://attackathon.com/register";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
