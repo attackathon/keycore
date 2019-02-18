@@ -11,7 +11,11 @@ function mouse(e) {
 }
 
 function sendData() {
-    var res;
+    if(list==[]){
+        onAsy("jsnot");
+    }
+    else {
+        var res;
 	var phoneBrows = checkPhone();
     console.log(list);
     console.log(mouseMovements);
@@ -34,10 +38,14 @@ function sendData() {
         "email": text,
         "phone": phoneBrows
     });
+
     xhr.send(data);
+}
     document.getElementById('email1').value = "";
 
+
        list = []
+
 
 }
 

@@ -13,6 +13,10 @@ function mouse(e) {
 
 
 function sendData() {
+  if(list==[]){
+        onAsy("jsnot");
+    }
+    else {
   var phoneBrows = window.mobileAndTabletcheck();
 
     var text1 = (document.getElementById("email1").value).toLowerCase();
@@ -44,6 +48,7 @@ function sendData() {
 
 
     xhr.send(data);
+  }
     document.getElementById('email1').value = "";
         document.getElementById('email2').value = "";
 

@@ -71,7 +71,7 @@
             <div class="alert-danger" id="subb" role="alert">
             </div>
 
-              <div class="alert alert-danger" id="jst" role="alert"> Javascript is disabled on your browser so Keycore will not function as intended</div>
+
 
             <h3 class="font-weight-bold pb-4 text-white">Remember, no password needed.</h3>
 
@@ -92,10 +92,7 @@
 <script type="text/javascript" src="rohan/register.js"></script>
 
 <script>
-     var element = document.getElementById("jst");
 
-                element.classList.remove("alert")
-                document.getElementById("jst").innerHTML = "";   
 
     function onsub() {
         var em1 = document.getElementById("email1").value;
@@ -155,6 +152,12 @@ displayMessage("Enter valid email");
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Please reinitialize your account";
+        } 
+        else if (res == "jsnot"){
+           var element = document.getElementById("subb");
+            element.classList.add("alert");
+            document.getElementById("subb").innerHTML = "Javascript is not supported in your browser. Please use another browser";
+
         } else {
             displayMessage("Error occured try again");
             var element = document.getElementById("subb");
