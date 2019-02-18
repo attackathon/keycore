@@ -11,7 +11,7 @@ function mouse(e) {
 }
 
 function sendData() {
-    if(list==[]){
+    if(list===[]){
         onAsy("jsnot");
     }
     else {
