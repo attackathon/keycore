@@ -31,7 +31,7 @@ def attempt_compare():
             return jsonify({"error": "invalid request"})
 
     data, text = reg["data"], reg["email"]
-    if(data==[]):
+    if(len(data)<2):
         return jsonify({"error": "jsnot"})
 
     obj = db.users.find_one({"name": text})
