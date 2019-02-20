@@ -30,6 +30,8 @@ function sendData() {
             var json = JSON.parse(xhr.responseText);
             //console.log(json);
             res = json;
+            list = [];
+mouseMovements = []
            onAsy(res);
 
         }
@@ -46,6 +48,7 @@ function sendData() {
 
 
        list = []
+        mouseMovements = []
 
 
 }

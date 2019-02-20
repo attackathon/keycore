@@ -33,6 +33,9 @@ function sendData() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var json = JSON.parse(xhr.responseText);
+            list = []
+            list2 = []
+           mouseMovements = []
            // console.log(json);
             onAsy(json);
         }
@@ -54,8 +57,9 @@ function sendData() {
     document.getElementById('email1').value = "";
         document.getElementById('email2').value = "";
 
-       list = []
-       list2 = []
+            list = []
+            list2 = []
+           mouseMovements = []
 
 }
 
