@@ -12,6 +12,7 @@ CORS(app)
 
 client = MongoClient()
 db = client.attackathon
+print("running")
 
 @app.route('/login', methods=['GET', 'POST'])
 def attempt_login():
