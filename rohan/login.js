@@ -11,8 +11,9 @@ function mouse(e) {
 }
 
 function sendData() {
-    if(list===[]){
-        onAsy("jsnot");
+    console.log(list.length)
+    if(list.length<2){
+        onAsy({error:"jsnot"});
     }
     else {
         var res;

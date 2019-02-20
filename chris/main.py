@@ -31,8 +31,6 @@ def attempt_compare():
             return jsonify({"error": "invalid request"})
 
     data, text = reg["data"], reg["email"]
-    if(len(data)<2):
-        return jsonify({"error": "jsnot"})
 
     obj = db.users.find_one({"name": text})
     if obj is None:
@@ -69,8 +67,7 @@ def attempt_register():
         
 
     data1, data2 = reg["1"], reg["2"]
-    if(data1==[] or data2==[]):
-        return jsonify({"error": "jsnot"})
+
     tw1, tw2 = reg["email1"], reg["email2"]
     avg = getavg(data1, data2)
 
