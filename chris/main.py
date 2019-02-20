@@ -100,4 +100,4 @@ def route_path(path):
         return "That page doesn't exist yet. You should make it."
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=443)
