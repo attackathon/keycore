@@ -129,6 +129,9 @@ displayMessage("Enter valid email");
 
     function onAsy(res) {
         console.log(res);
+                    document.getElementById('email1').value = "";
+            document.getElementById('email2').value = "";
+
         if (res == "true") {
             confetti.render();
             var element = document.getElementById("subb2");

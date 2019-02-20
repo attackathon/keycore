@@ -112,6 +112,7 @@
 
     function onAsy(res) {
         console.log(res);
+            document.getElementById('email1').value = "";
         if (res == "true") {
             confetti.render();
             var element = document.getElementById("subb2");
