@@ -13,8 +13,8 @@ function mouse(e) {
 
 
 function sendData() {
-  if(list==[]){
-        onAsy("jsnot");
+  if(list===[]){
+        onAsy({error:"jsnot"});
     }
     else {
   var phoneBrows = window.mobileAndTabletcheck();

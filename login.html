@@ -150,7 +150,7 @@
             var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Please reinitialize your account";
-        } else if (res == "jsnot"){
+        } else if (res.error == "jsnot"){
            var element = document.getElementById("subb");
             element.classList.add("alert");
             document.getElementById("subb").innerHTML = "Javascript is not supported in your browser. Please use another browser";
